@@ -15,6 +15,10 @@ import (
 func main() {
 	//	fmt.Println(3, "3")
 	//	fmt.Println(os.Args)
+	if len(os.Args) != 4 {
+		fmt.Println("Genau drei Eingabewerte vonnöten!")
+		return
+	}
 	a, err := strconv.ParseFloat(os.Args[1], 64)
 	if err != nil {
 		fmt.Println("ungültiger Wert für a")
