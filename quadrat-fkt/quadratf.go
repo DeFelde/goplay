@@ -11,15 +11,22 @@ import (
 )
 
 func main() {
-	var a float64 = 3
-	var b float64 = 4
-	var c float64 = 5
+	var (
+		a float64 = 3
+		b float64 = 4
+		c float64 = 17
+	)
 	p := b / a
 	q := c / a
 	d := -p / 2
 	Deskriminante := d*d + q
+	if Deskriminante < 0 {
+		fmt.Println("Für diese Gleichung existiert keine Lösung.")
+		return
+	}
 	wurzel := math.Sqrt(Deskriminante)
 	x1 := d + wurzel
 	x2 := d - wurzel
-	fmt.Println(x1, x2)
+	fmt.Printf("x1=%f, x2=%f\n", x1, x2)
+	//	fmt.Println("x1=", x1, ", x2=", x2)
 }
