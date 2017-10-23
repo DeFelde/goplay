@@ -8,14 +8,33 @@ package main
 import (
 	"fmt"
 	"math"
+	"os"
+	"strconv"
 )
 
 func main() {
-	var (
-		a float64 = 3
-		b float64 = 4
-		c float64 = 17
-	)
+	//	fmt.Println(3, "3")
+	//	fmt.Println(os.Args)
+	a, err := strconv.ParseFloat(os.Args[1], 64)
+	if err != nil {
+		fmt.Println("ungültiger Wert für a")
+		return
+	}
+	b, err := strconv.ParseFloat(os.Args[2], 64)
+	if err != nil {
+		fmt.Println("ungültiger Wert für b")
+		return
+	}
+	c, err := strconv.ParseFloat(os.Args[3], 64)
+	if err != nil {
+		fmt.Println("ungültiger Wert für c")
+		return
+	}
+	//	var (
+	//		a float64 = 3
+	//		b float64 = 4
+	//		c float64 = 17
+	//	)
 	p := b / a
 	q := c / a
 	d := -p / 2
