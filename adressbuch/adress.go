@@ -42,6 +42,8 @@ func main() {
 		k := kontakte[i]
 		if k.name == kname {
 			fmt.Println(k.name, k.address, k.phone, k.age)
+			return
 		}
 	}
+	fmt.Println("Haben wir nicht, überlegen sie sich was anderes. :D")
 }
