@@ -18,11 +18,19 @@ func main() {
 		contact{
 			name:    "Sarah",
 			address: "99423 Weimar",
-			phone:   "017631254433"},
+			phone:   "017631254433",
+			age:     18},
 		contact{
 			name:    "Klaus",
 			address: "Pragerstr. 42",
-			phone:   "015134876955"},
+			phone:   "015134876955",
+			age:     102},
 	}
-	fmt.Println(kontakte[0].name, kontakte[0].phone)
+
+	for i := 0; i < 2; i++ {
+		k := kontakte[i]
+		if k.name == "Sarah" {
+			fmt.Println(k.name, k.phone, k.age)
+		}
+	}
 }
