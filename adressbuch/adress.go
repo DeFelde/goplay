@@ -4,12 +4,25 @@ import (
 	"fmt"
 )
 
-type ()
+type (
+	contact struct {
+		name    string
+		address string
+		phone   string
+		age     int
+	}
+)
 
 func main() {
-	var kontakte = [][]string{
-		[]string{"Sarah", "99423 Weimar", "017631254433"},
-		[]string{"Klaus", "Pragerstr. 42", "015134876955"},
+	var kontakte = []contact{
+		contact{
+			name:    "Sarah",
+			address: "99423 Weimar",
+			phone:   "017631254433"},
+		contact{
+			name:    "Klaus",
+			address: "Pragerstr. 42",
+			phone:   "015134876955"},
 	}
-	fmt.Println(kontakte[0][0], kontakte[0][2])
+	fmt.Println(kontakte[0].name, kontakte[0].phone)
 }
