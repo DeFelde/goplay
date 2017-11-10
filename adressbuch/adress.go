@@ -13,8 +13,8 @@ type (
 	}
 )
 
-func main() {
-	var kontakte = []contact{
+var (
+	kontakte = []contact{
 		contact{
 			name:    "Sarah",
 			address: "99423 Weimar",
@@ -25,12 +25,23 @@ func main() {
 			address: "Pragerstr. 42",
 			phone:   "015134876955",
 			age:     102},
+		contact{
+			name:    "Mia",
+			address: "Pragerstr. 42",
+			phone:   "015134876955",
+			age:     102},
 	}
+)
 
-	for i := 0; i < 2; i++ {
+func main() {
+	var kname string
+	fmt.Print("Gebt bitte einen Namen ein: ")
+	fmt.Scanln(&kname)
+	//func Scanln(a ...interface{}) (n int, err error)
+	for i := 0; i < len(kontakte); i++ {
 		k := kontakte[i]
-		if k.name == "Sarah" {
-			fmt.Println(k.name, k.phone, k.age)
+		if k.name == kname {
+			fmt.Println(k.name, k.address, k.phone, k.age)
 		}
 	}
 }
