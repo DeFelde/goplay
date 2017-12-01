@@ -5,12 +5,15 @@ import (
 )
 
 func f(x float64) float64 {
-	return x * x * x
+	//return x * x * x
+	return -x
 }
 
 //TODO: Nullstelle genauer bestimmen
 func isNull(x, step float64) {
-	if f(x) < 0 && 0 < f(x+step) {
+	y1 := f(x)
+	y2 := f(x + step)
+	if (y1 < 0 && y2 > 0) || (y1 > 0 && y2 < 0) {
 		fmt.Println("Nullstelle")
 	}
 }
