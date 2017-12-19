@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
 )
 
 type (
@@ -39,6 +40,20 @@ var (
 func main() {
 	kontakte_b, err := ioutil.ReadFile("adressbuch.json")
 	if err != nil {
+		if os.IsNotExist(err) {
+			kontakte_b, err = json.MarshalIndent(kontakte_m, "", "  ")
+			if err != nil {
+				fmt.Println("Beim Konvertieren der Beispielkontakte ist ein Fehler aufgetreten:", err)
+				return
+			}
+			err := ioutil.WriteFile("adressbuch.json", kontakte_b, 0777)
+			if err != nil {
+				fmt.Println("Beim Schreiben der Beispielkontakte in das File adressbuch.json ist ein Fehler aufgetreten:", err)
+				return
+			}
+			fmt.Println("File adressuch.json hat nicht existiert, es wurde ein Beispieltext erzeugt.")
+			return
+		}
 		fmt.Println("Beim Lesen von adressbuch.json ist ein Fehler aufgetreten:", err)
 		return
 	}
