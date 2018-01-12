@@ -1,0 +1,162 @@
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ cd go/src/play
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ ll
+total 20
+drwxr-xr-x 1 cosim 197609 0 Nov 13 18:48  adressbuch/
+drwxr-xr-x 1 cosim 197609 0 Dez  1 21:56  funktionen/
+drwxr-xr-x 1 cosim 197609 0 Nov 13 21:36 'git today'/
+drwxr-xr-x 1 cosim 197609 0 Okt 27 20:51  Grundlagen/
+drwxr-xr-x 1 cosim 197609 0 Okt 20 19:42 'hello world'/
+drwxr-xr-x 1 cosim 197609 0 Okt 27 22:54  quadrat-fkt/
+drwxr-xr-x 1 cosim 197609 0 Okt 23 19:44  Uhr/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        funktionen/funktionen.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git commit -am "all functions up and down"
+warning: LF will be replaced by CRLF in funktionen/functions.go.
+The file will have its original line endings in your working directory.
+[master bacff0d] all functions up and down
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        funktionen/funktionen.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        funktionen/funktionen.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git stash list
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git stash save "der Versuch zur intervalleinschränkung"
+warning: LF will be replaced by CRLF in funktionen/functions.go.
+The file will have its original line endings in your working directory.
+Saved working directory and index state On master: der Versuch zur intervalleinschränkung
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        funktionen/funktionen.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git stash list
+stash@{0}: On master: der Versuch zur intervalleinschränkung
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git s
+send-email    shortlog      show          show-branch   stage         stash         status        submodule     subtree       svn
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git stash show
+ funktionen/functions.go | 17 ++++++++++-------
+ 1 file changed, 10 insertions(+), 7 deletions(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git stash show -v
+diff --git a/funktionen/functions.go b/funktionen/functions.go
+index 58cf534..121890a 100644
+--- a/funktionen/functions.go
++++ b/funktionen/functions.go
+@@ -10,22 +10,25 @@ func f(x float64) float64 {
+ }
+
+ //TODO: Nullstelle genauer bestimmen
+-func isNull(x, step float64) {
++func isNull(x, intervall float64) {
+        y1 := f(x)
+-       y2 := f(x + step)
++       y2 := f(x + intervall)
+        if (y1 < 0 && y2 > 0) || (y1 > 0 && y2 < 0) {
++               for intervall := 0.3; intervall > 0.01; intervall = intervall / 2 {
++                       fmt.Println(y1, y2, intervall, x)
++               }
+                fmt.Println("Nullstelle")
+        }
+ }
+
+ func main() {
+        var i = 1
+-       step := 0.3
+-       //fmt.Printf("step %T=%v\n", step, step)
+-       for x := -3.0; x < 7; x = x + step {
++       intervall := 0.3
++       //fmt.Printf("intervall %T=%v\n", intervall, intervall)
++       for x := -3.0; x < 7; x = x + intervall {
+                fmt.Println(i, "f(", x, ")=", f(x))
+-               isNull(x, step)
+-               //if f(x) < 0 && 0 < f(x+step) {
++               isNull(x, intervall)
++               //if f(x) < 0 && 0 < f(x+intervall) {
+                //      fmt.Println("Nullstelle")
+                //}
+                i++

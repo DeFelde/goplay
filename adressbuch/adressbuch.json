@@ -1,0 +1,20 @@
+{
+  "Klaus": {
+    "Name": "Klaus",
+    "Address": "Pragerstr. 42",
+    "Phone": "015134876955",
+    "Age": 102
+  },
+  "Mia": {
+    "Name": "Mia",
+    "Address": "Brahmsstraße 999",
+    "Phone": "015134876955",
+    "Age": 102
+  },
+  "Sarah": {
+    "Name": "Sarah",
+    "Address": "99423 Weimar",
+    "Phone": "017631254433",
+    "Age": 18
+  }
+}

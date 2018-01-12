@@ -1,0 +1,424 @@
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ cd go/src/play
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adressbuch/adress.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        17.10.27 git today.txt
+        27.10.17 git today.txt
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ ^C
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git checkout -- adressbuch/adress.go.
+error: pathspec 'adressbuch/adress.go.' did not match any file(s) known to git.
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git checkout -- adressbuch/adress.go
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        17.10.27 git today.txt
+        27.10.17 git today.txt
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adressbuch/adress.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        17.10.27 git today.txt
+        27.10.17 git today.txt
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git add adressbuch/adress.go
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   adressbuch/adress.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        17.10.27 git today.txt
+        27.10.17 git today.txt
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git commit -m "neues erste adressbuch"
+[master 76231d0] neues erste adressbuch
+ 1 file changed, 28 insertions(+), 15 deletions(-)
+ rewrite adressbuch/adress.go (78%)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        17.10.27 git today.txt
+        27.10.17 git today.txt
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ ^C
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adressbuch/adress.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git add adressbuch/adress.go
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git commit -m "super addressbuch"
+[master 5eb2d5c] super addressbuch
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git log
+commit 5eb2d5c8a111558bcb56aadd9a5aae3be25d72ce (HEAD -> master)
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Nov 10 21:33:30 2017 +0100
+
+    super addressbuch
+
+commit 76231d02f4c94ee16a1bd85663bf662a6dfed7dc
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Nov 10 20:24:11 2017 +0100
+
+    neues erste adressbuch
+
+commit f87a4041d5fff7ba88b75a35f76d21f268bb37a1
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Nov 10 20:00:43 2017 +0100
+
+    erstes Adressbuch
+
+commit aedf12b5cd4cc3754180a1f7d488188a664f18c3
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Oct 27 23:00:35 2017 +0200
+
+    Grundlagen & Arrays
+
+commit 38f41234c36d739a6c359d18bb6668af87727f23
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 21:39:13 2017 +0200
+
+    error handling complete
+
+commit 74b52d5d353d0f9a6d9ffb0d43e815a549ef15ab
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 21:27:23 2017 +0200
+
+    quadrat glg lösen beliebige Zahlen
+
+commit b1071654218cfa08e967c2b6d186746e5b26aba3
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 20:48:09 2017 +0200
+
+    Ästhetik
+
+commit 1ea0ca0f1f189168f5600b876b02f95584f29ed6
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 20:32:02 2017 +0200
+
+    quadrat-funktion
+
+commit dd78f34f43914dc5b809ac5e2cbf4be94349877a
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 19:47:21 2017 +0200
+
+    schleife erweitert
+
+commit 6fdffff356fa899d1fb857bec42c85a5111d67a1
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 19:05:24 2017 +0200
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git sta
+stage    stash    status
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git sta
+stage    stash    status
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git sta
+stage    stash    status
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ cd adressbuch/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ll
+total 2008
+-rw-r--r-- 1 cosim 197609     759 Nov 10 21:54 adress.go
+-rwxr-xr-x 1 cosim 197609 2051584 Nov 10 21:55 adressbuch.exe*
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ad
+AddressParser.dll  adhsvc.dll         adsldp.dll         adsmsext.dll       adtschema.dll      advapi32res.dll
+adhapi.dll         adprovider.dll     adsldpc.dll        adsnt.dll          advapi32.dll       advpack.dll
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ./adressbuch.exe
+Mia
+Mia 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ./adressbuch.exe
+Klaus
+Mia 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ./adressbuch.exe
+Otto
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ./adressbuch.exe
+Sarah
+Sarah 017631254433 18
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ./adressbuch.exe
+Klaus
+Klaus 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ./adressbuch.exe
+Klaus
+Klaus Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein
+mia
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein
+Mia
+Mia Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Klaus
+Klaus Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adress.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git commit -am "Super duper Adressbuch"
+[master 2cc38fe] Super duper Adressbuch
+ 1 file changed, 16 insertions(+), 5 deletions(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Lorentz
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: go
+Haben wir nicht, überlegen sie sich was anderes. :D
+Haben wir nicht, überlegen sie sich was anderes. :D
+Haben wir nicht, überlegen sie sich was anderes. :D
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Mia
+Haben wir nicht, überlegen sie sich was anderes. :D
+Haben wir nicht, überlegen sie sich was anderes. :D
+Mia Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Lollipop
+Haben wir nicht, überlegen sie sich was anderes. :D
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Klaus
+Klaus Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git commit -am "hervorragendes Addressbuch 2017"
+[master 8fddf7d] hervorragendes Addressbuch 2017
+ 1 file changed, 2 insertions(+)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ cd /c/opt
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt
+$ cd kara
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt/kara
+$ ll
+total 856
+-rw-r--r-- 1 cosim 197609 119288 Sep  1 06:39 'Lektion 0 Einführung.pdf'
+-rw-r--r-- 1 cosim 197609 414917 Sep  1 06:39 'Lektion 1 Einstieg.pdf'
+-rw-r--r-- 1 cosim 197609  99784 Sep  1 06:39 'Lektion 2 Methoden.pdf'
+-rw-r--r-- 1 cosim 197609 119594 Sep  1 06:39 'Lektion 3 Verzweigung.pdf'
+-rw-r--r-- 1 cosim 197609 106788 Sep  1 06:39 'Lektion 3.1 Übung.pdf'
+drwxr-xr-x 1 cosim 197609      0 Nov 10 22:36  Programm/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt/kara
+$ cd Programm/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt/kara/Programm
+$ ll
+total 2001
+-rw-r--r-- 1 cosim 197609      95 Sep  1 06:39 _javakarasettings
+-rw-r--r-- 1 cosim 197609 2045672 Sep  1 06:39 javakara.jar
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt/kara/Programm
+$ which java
+which: no java in (/c/Users/cosim/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/cosim/bin:/c/Program Files (x86)/Intel/iCLS Client:/c/Program Files/Intel/iCLS Client:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/opt/Go/bin:/cmd:/mingw64/bin:/usr/bin:/c/Users/cosim/AppData/Local/Microsoft/WindowsApps:/usr/bin/vendor_perl:/usr/bin/core_perl)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt/kara/Programm
+$ which java
+which: no java in (/c/Users/cosim/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/cosim/bin:/c/Program Files (x86)/Intel/iCLS Client:/c/Program Files/Intel/iCLS Client:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/opt/Go/bin:/cmd:/mingw64/bin:/usr/bin:/c/Users/cosim/AppData/Local/Microsoft/WindowsApps:/usr/bin/vendor_perl:/usr/bin/core_perl)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt/kara/Programm
+$

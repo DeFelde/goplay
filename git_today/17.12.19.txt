@@ -1,0 +1,311 @@
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ cd go/src/play/adressbuch/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ll
+total 2505
+-rw-r--r-- 1 cosim 197609    1849 Dez 19 20:43 adress.go
+-rwxr-xr-x 1 cosim 197609 2558976 Dez 19 20:45 adressbuch.exe*
+-rw-r--r-- 1 cosim 197609     341 Dez 19 20:45 adressbuch.json
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Sarah
+Sarah 99423 Weimar 017631254433 18
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Brahmsstraße 999 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adress.go
+        modified:   ../funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        adressbuch.json
+        ../funktionen/funktionen.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git diff adress.go
+diff --git a/adressbuch/adress.go b/adressbuch/adress.go
+index 4cf9ecd..d6fc949 100644
+--- a/adressbuch/adress.go
++++ b/adressbuch/adress.go
+@@ -4,6 +4,7 @@ import (
+        "encoding/json"
+        "fmt"
+        "io/ioutil"
++       "os"
+ )
+
+ type (
+@@ -39,6 +40,20 @@ var (
+ func main() {
+        kontakte_b, err := ioutil.ReadFile("adressbuch.json")
+        if err != nil {
++               if os.IsNotExist(err) {
++                       kontakte_b, err = json.MarshalIndent(kontakte_m, "", "                                                                                                                                    ")
++                       if err != nil {
++                               fmt.Println("Beim Konvertieren der Beispielkonta                                                                                                                                  kte ist ein Fehler aufgetreten:", err)
++                               return
+:...skipping...
+diff --git a/adressbuch/adress.go b/adressbuch/adress.go
+index 4cf9ecd..d6fc949 100644
+--- a/adressbuch/adress.go
++++ b/adressbuch/adress.go
+@@ -4,6 +4,7 @@ import (
+        "encoding/json"
+        "fmt"
+        "io/ioutil"
++       "os"
+ )
+
+ type (
+@@ -39,6 +40,20 @@ var (
+ func main() {
+        kontakte_b, err := ioutil.ReadFile("adressbuch.json")
+        if err != nil {
++               if os.IsNotExist(err) {
++                       kontakte_b, err = json.MarshalIndent(kontakte_m, "", "  ")
++                       if err != nil {
++                               fmt.Println("Beim Konvertieren der Beispielkontakte ist ein Fehler aufgetreten:", err)
++                               return
++                       }
++                       err := ioutil.WriteFile("adressbuch.json", kontakte_b, 0777)
++                       if err != nil {
++                               fmt.Println("Beim Schreiben der Beispielkontakte in das File adressbuch.json ist ein Fehler aufgetreten:", err)
++                               return
++                       }
++                       fmt.Println("File adressuch.json hat nicht existiert, es wurde ein Beispieltext erzeugt.")
++                       return
++               }
+                fmt.Println("Beim Lesen von adressbuch.json ist ein Fehler aufgetreten:", err)
+                return
+        }
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git diff adress.go
+diff --git a/adressbuch/adress.go b/adressbuch/adress.go
+index 4cf9ecd..d6fc949 100644
+--- a/adressbuch/adress.go
++++ b/adressbuch/adress.go
+@@ -4,6 +4,7 @@ import (
+        "encoding/json"
+        "fmt"
+        "io/ioutil"
++       "os"
+ )
+
+ type (
+@@ -39,6 +40,20 @@ var (
+ func main() {
+        kontakte_b, err := ioutil.ReadFile("adressbuch.json")
+        if err != nil {
++               if os.IsNotExist(err) {
++                       kontakte_b, err = json.MarshalIndent(kontakte_m, "", "  ")
++                       if err != nil {
++                               fmt.Println("Beim Konvertieren der Beispielkontakte ist ein Fehler aufgetreten:", err)
++                               return
++                       }
++                       err := ioutil.WriteFile("adressbuch.json", kontakte_b, 0777)
++                       if err != nil {
++                               fmt.Println("Beim Schreiben der Beispielkontakte in das File adressbuch.json ist ein Fehler aufgetreten:", err)
++                               return
++                       }
++                       fmt.Println("File adressuch.json hat nicht existiert, es wurde ein Beispieltext erzeugt.")
++                       return
++               }
+                fmt.Println("Beim Lesen von adressbuch.json ist ein Fehler aufgetreten:", err)
+                return
+        }
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git add adress
+adress.go        adressbuch.exe   adressbuch.json
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git add adress.go
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   adress.go
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        adressbuch.json
+        ../funktionen/funktionen.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git commit -m
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git commit -m "Fehlerbehandlung hinzugefügt"
+[master 124c6e4] Fehlerbehandlung hinzugefügt
+ 1 file changed, 15 insertions(+)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Brahmsstraße 999 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Klaus
+Klaus Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: leo
+Haben wir nicht, überlegen sie sich was anderes. :D
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ go run adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Brahmsstraße 999 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git add adress.go
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git commit -m "Fehlerbehandlung in Fkt. verschoben."
+[master 864d2d5] Fehlerbehandlung in Fkt. verschoben.
+ 1 file changed, 19 insertions(+), 15 deletions(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        adressbuch.json
+        ../funktionen/funktionen.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)

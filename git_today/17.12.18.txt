@@ -1,0 +1,281 @@
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ cd go/src/play/adressbuch/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ ll
+total 2420
+-rw-r--r-- 1 cosim 197609    1291 Dez 18 21:36 adress.go
+-rwxr-xr-x 1 cosim 197609 2472448 Dez 18 21:36 adressbuch.exe*
+-rw-r--r-- 1 cosim 197609       0 Dez 18 21:30 adressbuch.json
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adress.go
+        modified:   ../funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        adressbuch.json
+        ../funktionen/funktionen.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git add adress.go
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   adress.go
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        adressbuch.json
+        ../funktionen/funktionen.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git commit -m "add posibility to read contacts from json-file"
+[master 31ea15c] add posibility to read contacts from json-file
+ 1 file changed, 29 insertions(+), 17 deletions(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git log
+commit 31ea15c30e5444c36176c81c3212960171b54028 (HEAD -> master)
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Dec 18 21:41:40 2017 +0100
+
+    add posibility to read contacts from json-file
+
+commit bacff0d2e8521b47bf3eafd4a14587f81778fd8c
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Dec 1 21:59:11 2017 +0100
+
+    all functions up and down
+
+commit cea2170af1b8b4d10d333117c714428f50a13ba1
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Nov 13 21:33:10 2017 +0100
+
+    Kurvendiskussion das Erwachen der Formel
+
+commit 12a54800852bf52e13d9717ffab00aa1d993a7b4
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Nov 13 18:52:29 2017 +0100
+
+    Mapeinführung Adressbuch
+
+commit 8fddf7daf79e8814adb87383ace4828e73fba822
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Nov 10 22:21:26 2017 +0100
+
+    hervorragendes Addressbuch 2017
+
+commit 2cc38feb206387efb99c205839daa399b77d96f8
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Nov 10 22:07:35 2017 +0100
+
+    Super duper Adressbuch
+
+commit 5eb2d5c8a111558bcb56aadd9a5aae3be25d72ce
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Nov 10 21:33:30 2017 +0100
+
+    super addressbuch
+
+commit 76231d02f4c94ee16a1bd85663bf662a6dfed7dc
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Nov 10 20:24:11 2017 +0100
+
+    neues erste adressbuch
+
+commit f87a4041d5fff7ba88b75a35f76d21f268bb37a1
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Nov 10 20:00:43 2017 +0100
+
+    erstes Adressbuch
+
+commit aedf12b5cd4cc3754180a1f7d488188a664f18c3
+Author: Blue <cosinori@gmail.com>
+Date:   Fri Oct 27 23:00:35 2017 +0200
+
+    Grundlagen & Arrays
+
+commit 38f41234c36d739a6c359d18bb6668af87727f23
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 21:39:13 2017 +0200
+
+    error handling complete
+
+commit 74b52d5d353d0f9a6d9ffb0d43e815a549ef15ab
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 21:27:23 2017 +0200
+
+    quadrat glg lösen beliebige Zahlen
+
+commit b1071654218cfa08e967c2b6d186746e5b26aba3
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 20:48:09 2017 +0200
+
+    Ästhetik
+
+commit 1ea0ca0f1f189168f5600b876b02f95584f29ed6
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 20:32:02 2017 +0200
+
+    quadrat-funktion
+
+commit dd78f34f43914dc5b809ac5e2cbf4be94349877a
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 19:47:21 2017 +0200
+
+    schleife erweitert
+
+commit 6fdffff356fa899d1fb857bec42c85a5111d67a1
+Author: Blue <cosinori@gmail.com>
+Date:   Mon Oct 23 19:05:24 2017 +0200
+
+    erstes go-programm
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git diff
+diff --git a/adressbuch/adress.go b/adressbuch/adress.go
+index 4cf9ecd..4737d3b 100644
+--- a/adressbuch/adress.go
++++ b/adressbuch/adress.go
+@@ -4,6 +4,7 @@ import (
+        "encoding/json"
+        "fmt"
+        "io/ioutil"
++       "os"
+ )
+
+ type (
+@@ -39,6 +40,9 @@ var (
+ func main() {
+        kontakte_b, err := ioutil.ReadFile("adressbuch.json")
+        if err != nil {
++               if os.IsNotExist(err) {
++                       kontakte_b, err = json.MarshalIndent(kontakte_m, "", "  ")
++               }
+                fmt.Println("Beim Lesen von adressbuch.json ist ein Fehler aufgetreten:", err)
+                return
+        }
+diff --git a/funktionen/functions.go b/funktionen/functions.go
+index 58cf534..0d2ecc9 100644
+--- a/funktionen/functions.go
++++ b/funktionen/functions.go
+@@ -5,29 +5,39 @@ import (
+ )
+
+ func f(x float64) float64 {
+-       //return x * x * x
+-       return -x
++       return x*x - 4
++       //      return x
+ }
+
+-//TODO: Nullstelle genauer bestimmen
+-func isNull(x, step float64) {
+-       y1 := f(x)
+-       y2 := f(x + step)
+-       if (y1 < 0 && y2 > 0) || (y1 > 0 && y2 < 0) {
+-               fmt.Println("Nullstelle")
++func checkNull(epsilon, xStart, intervall float64, depht int) {
++       fmt.Printf(">checkNull %2d: xStart=%.7f, intervall=%.7f\n", depht, xStart, intervall)
++       xEnd := xStart + intervall
++       step := intervall / 3
++       for x := xStart; x < xEnd; x = x + step {
++               //              fmt.Println("x=", x, "y=", f(x))
++               //fmt.Println(i, "f(", x, ")=", f(x))
++               x1 := x
++               x2 := x + step
++               y1 := f(x1)
++               y2 := f(x2)
++               fmt.Printf("   step= %.7f, y1=%.7f, y2=%.7f\n", step, y1, y2)
++               if (y1 <= 0 && y2 > 0) || (y1 >= 0 && y2 < 0) {
++                       if step < epsilon {
++                               //                              fmt.Println("Nullstelle", x1, x2)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adress.go
+        modified:   ../funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        adressbuch.exe
+        adressbuch.json
+        ../funktionen/funktionen.exe
+        ../git today/
+        ../hello world/hello world.exe
+        ../quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)
+$ git diff adress.go
+diff --git a/adressbuch/adress.go b/adressbuch/adress.go
+index 4cf9ecd..4737d3b 100644
+--- a/adressbuch/adress.go
++++ b/adressbuch/adress.go
+@@ -4,6 +4,7 @@ import (
+        "encoding/json"
+        "fmt"
+        "io/ioutil"
++       "os"
+ )
+
+ type (
+@@ -39,6 +40,9 @@ var (
+ func main() {
+        kontakte_b, err := ioutil.ReadFile("adressbuch.json")
+        if err != nil {
++               if os.IsNotExist(err) {
++                       kontakte_b, err = json.MarshalIndent(kontakte_m, "", "  ")
++               }
+                fmt.Println("Beim Lesen von adressbuch.json ist ein Fehler aufgetreten:", err)
+                return
+        }
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/adressbuch (master)

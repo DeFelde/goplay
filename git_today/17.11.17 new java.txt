@@ -1,0 +1,71 @@
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ which java
+/c/ProgramData/Oracle/Java/javapath/java
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd /c/opt/kara/Programm/
+_javakarasettings  javakara.jar
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd /c/opt/kara/Programm/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt/kara/Programm
+$ java -jar
+_javakarasettings  javakara.jar
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /c/opt/kara/Programm
+$ java -jar javakara.jar
+java.lang.Exception: Das Programm konnte nicht kompiliert werden.
+Die Original-Fehlermeldung lautet:
+java.io.IOException
+Cannot run program "javac": CreateProcess error=2, Das System kann die angegeben                                                                                                                                  e Datei nicht finden
+        at ch.karatojava.kapps.abstractscriptide.JavaCompiler.compile(Unknown So                                                                                                                                  urce)
+        at ch.karatojava.kapps.abstractscriptide.JavaEditor.compile(Unknown Sour                                                                                                                                  ce)
+        at ch.karatojava.kapps.abstractscriptide.JavaEditor.getContent(Unknown S                                                                                                                                  ource)
+        at ch.karatojava.kapps.abstractscriptide.AbstractScriptInterpreter.play(                                                                                                                                  Unknown Source)
+        at ch.karatojava.interpreter.InterpreterToolbar.play(Unknown Source)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at ch.karatojava.util.ExceptionActionListener.actionPerformed(Unknown So                                                                                                                                  urce)
+        at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+        at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+        at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+        at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+        at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Sour                                                                                                                                  ce)
+        at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+        at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+        at java.awt.Component.processMouseEvent(Unknown Source)
+        at javax.swing.JComponent.processMouseEvent(Unknown Source)
+        at java.awt.Component.processEvent(Unknown Source)
+        at java.awt.Container.processEvent(Unknown Source)
+        at java.awt.Component.dispatchEventImpl(Unknown Source)
+        at java.awt.Container.dispatchEventImpl(Unknown Source)
+        at java.awt.Component.dispatchEvent(Unknown Source)
+        at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+        at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+        at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+        at java.awt.Container.dispatchEventImpl(Unknown Source)
+        at java.awt.Window.dispatchEventImpl(Unknown Source)
+        at java.awt.Component.dispatchEvent(Unknown Source)
+        at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+        at java.awt.EventQueue.access$500(Unknown Source)
+        at java.awt.EventQueue$3.run(Unknown Source)
+        at java.awt.EventQueue$3.run(Unknown Source)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionP                                                                                                                                  rivilege(Unknown Source)
+        at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionP                                                                                                                                  rivilege(Unknown Source)
+        at java.awt.EventQueue$4.run(Unknown Source)
+        at java.awt.EventQueue$4.run(Unknown Source)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionP                                                                                                                                  rivilege(Unknown Source)
+        at java.awt.EventQueue.dispatchEvent(Unknown Source)
+        at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+        at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+        at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+        at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+        at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+        at java.awt.EventDispatchThread.run(Unknown Source)
+

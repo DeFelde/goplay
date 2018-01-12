@@ -1,0 +1,304 @@
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ which javac
+which: no javac in (/c/Users/cosim/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/cosim/bin:/c/ProgramData/Oracle/Java/javapath:/c/Program Files (x86)/Intel/iCLS Client:/c/Program Files/Intel/iCLS Client:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/opt/Go/bin:/cmd:/mingw64/bin:/usr/bin:/c/Users/cosim/AppData/Local/Microsoft/WindowsApps:/usr/bin/vendor_perl:/usr/bin/core_perl)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ pwd
+/c/Users/cosim
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ cd go
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go
+$ cd src/play
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adressbuch/adress.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git diff adressbuch/adress.go
+diff --git a/adressbuch/adress.go b/adressbuch/adress.go
+index 563e645..96ca84d 100644
+--- a/adressbuch/adress.go
++++ b/adressbuch/adress.go
+@@ -37,7 +37,6 @@ func main() {
+        var kname string
+        fmt.Print("Gebt bitte einen Namen ein: ")
+        fmt.Scanln(&kname)
+-       //func Scanln(a ...interface{}) (n int, err error)
+        for i := 0; i < len(kontakte); i++ {
+                k := kontakte[i]
+                if k.name == kname {
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: mia
+Haben wir nicht, überlegen sie sich was anderes. :D
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: klaro
+panic: runtime error: index out of range
+
+goroutine 1 [running]:
+main.main()
+        C:/Users/cosim/go/src/play/adressbuch/adress.go:41 +0x32d
+exit status 2
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Sarah
+Sarah 99423 Weimar 017631254433 18
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: paul
+   0
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: sarah
+Haben wir nicht, überlegen sie sich was anderes. :D
+   0
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: sariiii
+Haben wir nicht, überlegen sie sich was anderes. :D
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: lopi
+Haben wir nicht, überlegen sie sich was anderes. :D
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Klaus
+Klaus Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Klaus
+Klaus Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Mia
+Mia Pragerstr. 42 015134876955 102
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run adressbuch/adress.go
+Gebt bitte einen Namen ein: Sarah              l
+Sarah 99423 Weimar 017631254433 18
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   adressbuch/adress.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git commit
+On branch master
+Changes not staged for commit:
+        modified:   adressbuch/adress.go
+
+Untracked files:
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+no changes added to commit
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git commit -am "Mapeinführung Adressbuch"
+[master 12a5480] Mapeinführung Adressbuch
+ 1 file changed, 10 insertions(+), 12 deletions(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        funktionen/
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git add funktionen/fun
+functions.go    funktionen.exe
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git add funktionen/fun
+functions.go    funktionen.exe
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git add funktionen/functions.go
+warning: LF will be replaced by CRLF in funktionen/functions.go.
+The file will have its original line endings in your working directory.
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   funktionen/functions.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        funktionen/funktionen.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git commit -m "Kurvendiskussion das Erwachen der Formel"
+[master cea2170] Kurvendiskussion das Erwachen der Formel
+ 1 file changed, 30 insertions(+)
+ create mode 100644 funktionen/functions.go
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Grundlagen/
+        Uhr/Uhr.exe
+        adressbuch/adressbuch.exe
+        funktionen/funktionen.exe
+        git today/
+        hello world/hello world.exe
+        quadrat-fkt/quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ go run funktionen/functions.go
+1 f( -3 )= -27
+2 f( -2.7 )= -19.683000000000003
+3 f( -2.4000000000000004 )= -13.824000000000005
+4 f( -2.1000000000000005 )= -9.261000000000006
+5 f( -1.8000000000000005 )= -5.832000000000004
+6 f( -1.5000000000000004 )= -3.375000000000003
+7 f( -1.2000000000000004 )= -1.7280000000000018
+8 f( -0.9000000000000004 )= -0.7290000000000009
+9 f( -0.6000000000000003 )= -0.21600000000000033
+10 f( -0.3000000000000003 )= -0.027000000000000086
+11 f( -3.3306690738754696e-16 )= -3.6948299352314513e-47
+Nullstelle
+12 f( 0.29999999999999966 )= 0.026999999999999906
+13 f( 0.5999999999999996 )= 0.21599999999999964
+14 f( 0.8999999999999997 )= 0.7289999999999992
+15 f( 1.1999999999999997 )= 1.7279999999999986
+16 f( 1.4999999999999998 )= 3.3749999999999987
+17 f( 1.7999999999999998 )= 5.831999999999998
+18 f( 2.0999999999999996 )= 9.260999999999996
+19 f( 2.3999999999999995 )= 13.82399999999999
+20 f( 2.6999999999999993 )= 19.682999999999986
+21 f( 2.999999999999999 )= 26.999999999999975
+22 f( 3.299999999999999 )= 35.93699999999997
+23 f( 3.5999999999999988 )= 46.65599999999995
+24 f( 3.8999999999999986 )= 59.31899999999993
+25 f( 4.199999999999998 )= 74.08799999999991
+26 f( 4.499999999999998 )= 91.1249999999999
+27 f( 4.799999999999998 )= 110.59199999999987
+28 f( 5.099999999999998 )= 132.6509999999998
+29 f( 5.399999999999998 )= 157.4639999999998
+30 f( 5.6999999999999975 )= 185.19299999999976
+31 f( 5.999999999999997 )= 215.99999999999974
+32 f( 6.299999999999997 )= 250.04699999999966
+33 f( 6.599999999999997 )= 287.4959999999996
+34 f( 6.899999999999997 )= 328.50899999999956
+

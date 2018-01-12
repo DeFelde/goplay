@@ -1,0 +1,167 @@
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ cd go/src/play/
+.git/        Grundlagen/  hello world/ quadrat-fkt/ Uhr/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ cd go/src/play/quadrat-fkt/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ ll
+total 1940
+-rw-r--r-- 1 cosim 197609    1119 Okt 27 21:09 quadratf.go
+-rwxr-xr-x 1 cosim 197609 1979904 Okt 27 21:09 quadrat-fkt.exe*
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build816171358\\command-line-arguments\\_obj\\exe\\quadratf.exe"}
+Genau drei Eingabewerte vonnöten!
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 4 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build756242002\\command-line-arguments\\_obj\\exe\\quadratf.exe", "4", "7", "9"}
+x1=0.861555, x2=-2.611555
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 4 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build586404574\\command-line-arguments\\_obj\\exe\\quadratf.exe", "4", "7", "9"}
+a=%!d(float64=4)x1=0.861555, x2=-2.611555
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 4 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build435634622\\command-line-arguments\\_obj\\exe\\quadratf.exe", "4", "7", "9"}
+a=4
+x1=0.861555, x2=-2.611555
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 4 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build900179470\\command-line-arguments\\_obj\\exe\\quadratf.exe", "4", "7", "9"}
+a=4.000000
+x1=0.861555, x2=-2.611555
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go q 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build223836106\\command-line-arguments\\_obj\\exe\\quadratf.exe", "q", "7", "9"}
+a=0.000000
+ungültiger Wert für a
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$
+Display all 4622 possibilities? (y or n)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go q 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build743858942\\command-line-arguments\\_obj\\exe\\quadratf.exe", "q", "7", "9"}
+a=0.000000
+ungültiger Wert für a(q): strconv.ParseFloat: parsing "q": invalid syntax
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 5 7 9 8 1
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build875824570\\command-line-arguments\\_obj\\exe\\quadratf.exe", "5", "7", "9", "8", "1"}
+Genau drei Eingabewerte vonnöten!
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 5 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build669908942\\command-line-arguments\\_obj\\exe\\quadratf.exe", "5", "7", "9"}
+a=5.000000
+a=7.000000
+a=9.000000
+panic: runtime error: index out of range
+
+goroutine 1 [running]:
+main.main()
+        C:/Users/cosim/go/src/play/quadrat-fkt/quadratf.go:31 +0x530
+exit status 2
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 5 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build523828774\\command-line-arguments\\_obj\\exe\\quadratf.exe", "5", "7", "9"}
+a=5.000000
+a=7.000000
+a=9.000000
+x1=0.813275, x2=-2.213275
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 5 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build096932854\\command-line-arguments\\_obj\\exe\\quadratf.exe", "5", "7", "9"}
+a=5.000000
+a=7.000000
+a=9.000000
+5.000000 x^2 + 7.000000 x + 9.000000 = 0
+x1=0.813275, x2=-2.213275
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 5 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build448929882\\command-line-arguments\\_obj\\exe\\quadratf.exe", "5", "7", "9"}
+5.0 x^2 + 7.0 x + 9.0 = 0
+x1=0.813275, x2=-2.213275
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 5 7 9
+#os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build795737490\\command-line-arguments\\_obj\\exe\\quadratf.exe", "5", "7", "9"}
+5.0 x^2 + 7.0 x + 9.0 = 0
+x^2 + 1.4 x + 1.8 = 0
+x1=0.813275, x2=-2.213275
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 5 7 9
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build201280566\\command-line-arguments\\_obj\\exe\\quadratf.exe", "5", "7", "9"}
+5.0 x^2 + 7.0 x + 9.0 = 0
+x^2 + 1.400 x + 1.800 = 0
+x1=0.813275, x2=-2.213275
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 5 2 10
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build556569098\\command-line-arguments\\_obj\\exe\\quadratf.exe", "5", "2", "10"}
+5.0 x^2 + 2.0 x + 10.0 = 0
+x^2 + 0.400 x + 2.000 = 0
+x1=1.228286, x2=-1.628286
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ go run quadratf.go 7 2 10
+os.Args=[]string{"C:\\Users\\cosim\\AppData\\Local\\Temp\\go-build200075338\\command-line-arguments\\_obj\\exe\\quadratf.exe", "7", "2", "10"}
+7.0 x^2 + 2.0 x + 10.0 = 0
+x^2 + 0.286 x + 1.429 = 0
+x1=1.060879, x2=-1.346593
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   quadratf.go
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        ../hello world/hello world.exe
+        quadrat-fkt.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ git commit -am "Grundlagen & Arrays"
+[master aedf12b] Grundlagen & Arrays
+ 1 file changed, 31 insertions(+), 21 deletions(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../Grundlagen/
+        ../Uhr/Uhr.exe
+        ../hello world/hello world.exe
+        quadrat-fkt.exe
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play/quadrat-fkt (master)
