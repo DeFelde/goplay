@@ -12,3 +12,5 @@ func main() {
 	//http://adventofcode.com/2017/day/1
 	fmt.Println(int('3') - int('0'))
 }
+
+// einmal uploaden bitte
