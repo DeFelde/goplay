@@ -1,0 +1,81 @@
+
+cosim@LAPTOP-Q07B3NSA MINGW64 /
+$ cd
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~
+$ cd go/src/play
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ ll
+total 33
+drwxr-xr-x 1 cosim 197609     0 Dez 19 21:24  adressbuch/
+drwxr-xr-x 1 cosim 197609     0 Jan 15 21:01  advent/
+drwxr-xr-x 1 cosim 197609     0 Dez  4 21:53  funktionen/
+drwxr-xr-x 1 cosim 197609     0 Dez 19 21:45  git_today/
+drwxr-xr-x 1 cosim 197609     0 Okt 27 20:51  Grundlagen/
+drwxr-xr-x 1 cosim 197609     0 Okt 20 19:42 'hello world'/
+-rw-r--r-- 1 cosim 197609 11558 Jan 12 18:38  LICENSE
+drwxr-xr-x 1 cosim 197609     0 Okt 27 22:54  quadrat-fkt/
+-rw-r--r-- 1 cosim 197609     8 Jan 12 18:38  README.md
+drwxr-xr-x 1 cosim 197609     0 Okt 23 19:44  Uhr/
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origine/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   advent/day01.go
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git commit -am "Advent01 fertig"
+warning: LF will be replaced by CRLF in advent/day01.go.
+The file will have its original line endings in your working directory.
+[master 0525053] Advent01 fertig
+ 1 file changed, 21 insertions(+), 1 deletion(-)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Your branch is ahead of 'origine/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git remote -v
+origine https://github.com/DeFelde/goplay.git (fetch)
+origine https://github.com/DeFelde/goplay.git (push)
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git pull
+Already up-to-date.
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 575 bytes | 575.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/DeFelde/goplay.git
+   7e6f83c..0525053  master -> master
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git pull
+Already up-to-date.
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origine/master'.
+
+nothing to commit, working tree clean
+
+cosim@LAPTOP-Q07B3NSA MINGW64 ~/go/src/play (master)
